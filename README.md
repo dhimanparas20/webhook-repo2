@@ -1,47 +1,41 @@
-# Dev Assessment - Webhook Receiver
+# Github Action Notifier
 
-Please use this repository for constructing the Flask webhook receiver.
+This repository listens to Github actions for the repository [https://github.com/dhimanparas20/action-repo](https://github.com/dhimanparas20/action-repo). It captures any push, pull, or merge actions on this repository using webhooks and displays them on a front-end UI.
 
-*******************
+## Project Overview
 
-## Setup
+- **Backend:** Built using Flask-RESTful
+- **Database:** MongoDB to store all Github changes
+- **Frontend:** Displays the captured actions with details
 
-* Create a new virtual environment
 
-```bash
-pip install virtualenv
-```
+## How to Use
 
-* Create the virtual env
+1. **Clone the Repository:**
 
-```bash
-virtualenv venv
-```
+   ```sh
+   git clone https://github.com/dhimanparas20/webhook-repo
+   cd webhook-repo
+   ```
 
-* Activate the virtual env
+2. **Install Dependencies:**
 
-```bash
-source venv/bin/activate
-```
+    ```sh
+    uv run run.py 
+    ```
 
-* Install requirements
+2. **Deploy the Project:**    
+    
+    ```
+    Deploy this project on a server and get a domain or use ngrok to expose the local server.
+    ```
 
-```bash
-pip install -r requirements.txt
-```
+2. **Set Up Webhook:**     
 
-* Run the flask application (In production, please use Gunicorn)
+    ```
+    In the settings of the target repository (action-repo), go to Settings -> Webhooks, and add the domain followed by /api/event/ as the payload URL.
 
-```bash
-python run.py
-```
+    Example: http://yourdomain.com/api/event/ or http://yourngrokaddress.ngrok.io/api/event/
+    ```
 
-* The endpoint is at:
-
-```bash
-POST http://127.0.0.1:5000/webhook/receiver
-```
-
-You need to use this as the base and setup the flask app. Integrate this with MongoDB (commented at `app/extensions.py`)
-
-*******************
+### That's it! Now, any push, pull, or merge actions on the target repository will be captured and displayed in the front-end UI of this project.    

@@ -1,0 +1,16 @@
+[project]
+name = "tsk-public-assignment-webhook-repo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "flask>=3.1.1",
+    "flask-pymongo>=3.0.1",
+    "flask-restful>=0.3.10",
+    "gunicorn>=23.0.0",
+    "passlib>=1.7.4",
+    "pydantic>=2.11.5",
+    "pymongo>=4.13.0",
+    "requests>=2.32.3",
+]
