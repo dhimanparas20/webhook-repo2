@@ -1,0 +1,4 @@
+2025-06-05 20:36:04,457 - WARNING -  * Debugger is active!
+2025-06-05 20:36:04,457 - INFO -  * Debugger PIN: 865-233-729
+2025-06-05 20:36:05,506 - INFO - No New Webhook events Found in last 60 sec
+2025-06-05 20:36:05,506 - INFO - 127.0.0.1 - - [05/Jun/2025 20:36:05] "[33mGET /webhook/events HTTP/1.1[0m" 404 -

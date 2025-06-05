@@ -2,7 +2,7 @@ $(document).ready(function() {
     function fetchData() {
         console.log('Fetching data from the webhook receiver...');
         $.ajax({
-            url: '/webhook/receiver',
+            url: '/webhook/events',
             method: 'GET',
             dataType: 'json',
             success: function(data) {
